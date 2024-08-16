@@ -53,9 +53,49 @@ body {
     color: #ffffff; 
 }
 
-.dark-theme .about h3 {
-    color: #ffffff;
+.dark-theme .about {
+    background-color: #000000; /* Fundo da secção em modo escuro */
+    color: #ffffff; /* Cor do texto em modo escuro */
 }
+
+.dark-theme .about h2,
+.dark-theme .about h3,
+.dark-theme .about h1,
+.dark-theme .about p {
+    color: #ffffff; /* Garante que todos os textos fiquem brancos no modo escuro */
+}
+
+.dark-theme .about-buttons .btn {
+    background-color: #6C63FF; /* Cor de fundo do botão em modo escuro */
+    color: #ffffff; /* Cor do texto do botão em modo escuro */
+}
+
+.dark-theme .about-buttons .btn:hover {
+    background-color: #4a42cc; /* Cor de fundo do botão ao passar o mouse em modo escuro */
+}
+
+.dark-theme .about-img img {
+    border-color: #ffffff; /* Borda da imagem em modo escuro, se necessário */
+}
+
+.dark-theme .habilidades .habilidades-box {
+    color: #ffffff; 
+    background-color: #333333; 
+}
+
+.dark-theme .habilidades .habilidades-box:hover {
+    box-shadow: 0 0 20px #6C63FF; /* Ajuste o sombreado para um tom que combine com o tema escuro */
+}
+
+.dark-theme .habilidades .habilidades-box i {
+    color: #9E87FF; /* Pode mudar a cor do ícone para uma cor mais adequada ao tema escuro */
+}
+
+/* Caso "MINHAS" esteja em um título específico */
+.dark-theme h2.titulo {
+    color: #ffffff; /* Altere a cor para o tema escuro */
+}
+
 
 .toggle-theme-btn {
     position: fixed;
@@ -98,6 +138,11 @@ body {
     justify-content: space-between;
     padding: 35px 15%;
     border-bottom: 1px solid transparent;  
+    transition: top 0.3s; /* Transição suave */
+}
+
+.header.hidden {
+    top: -100px; /* Move o cabeçalho para fora da vista */
 }
 
 .header li {
@@ -140,6 +185,10 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+.home-text, .rede-sociais, .button, .scroll-down-link, .p, .about, .certificacoes {
+    visibility: hidden;
 }
 
 .slide {
@@ -287,7 +336,7 @@ body {
     margin-left: 20px; 
 }
 
-.btn2 :hover {
+.btn2 :hover, form .btn-enviar input:hover {
     transform: scale(0.9);
     transition: all .45s ease;
 }
@@ -297,109 +346,124 @@ body {
     color: #6C63FF;
 }
 
+
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    text-align: center;
-    padding: 50px 0;
+    padding: 150px ;
+    color: #000000; /* Texto em branco */
+    background-color: #ffffff; /* Fundo preto */
 }
 
 .about h2 {
+    font-size: 20px;
+    color: #000000; /* Cor azul */
     margin-bottom: 10px;
-    font-size: 19px; /* Ajuste o tamanho da fonte conforme necessário */
 }
 
 .about h3 {
-    font-size: 50px; /* Ajuste o tamanho da fonte conforme necessário */
-    color: #000000; /* Ajuste a cor do texto conforme necessário */
-    margin-top: 5px; /* Adicione uma pequena margem entre "Conheça mais" e "Sobre mim" */
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 30px;
 }
 
 .about-content {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
 }
 
-.about-img {
-    margin-right: 60%; /* Ajuste a margem para a esquerda conforme necessário */
-    padding: 3%;
+.about-text {
+    flex: 1;
+    text-align: left;
+    padding-right: 100px;
+    padding-left: 40px;
+}
+
+.about-text h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-buttons {
+    margin-top: 20px;
+}
+
+.about-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 10px;
+    background-color: #6C63FF;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s;
+    transition: all .45s ease;
+    text-decoration: none;
+}
+
+.about-buttons .btn:hover {
+    background-color: #6C63FF;
 }
 
 .about-img img {
-    width: 395px; /* Define a largura desejada */
-    height: 395px; /* Define a altura desejada */
-    border-radius: 10%; /* Mantém a borda arredondada */
-    object-fit: cover;
+    width: 90%; /* Ajuste para 80% da largura do contêiner pai */
+    max-width: 400px; /* Define um tamanho máximo para a imagem */
+    height: auto;
+    border-radius: 30px;
 }
 
-.experiencias {
-    margin-top: -20%;
-    width: 400px; /* largura do retângulo */
-    height: 110px; /* altura do retângulo */
-    background-color: white; /* cor de fundo */
-    border: 1px solid rgb(43, 41, 41); /* borda preta de 2px */
-    padding: 20px; /* espaço interno */
-    border-radius: 2rem;
-}
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
 
-.experiencias h2 {
-    font-size: 20px;
-    font-weight: 700;
-    padding: 5px;
-}
+    .about-text {
+        padding-right: 0;
+        text-align: center;
+    }
 
-.experiencias p {
-    padding: 5px;
-    color: rgb(85, 85, 85);
-}
+    .about-img {
+        text-align: center;
+        margin-top: 20px;
+    }
 
-.fa-medal {
-    color: #6C63FF;
-    font-size: 24px; /* Define o tamanho do ícone */
-    margin-right: 5px; /* Adiciona uma pequena margem à direita do ícone */
-}
+    .about-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
 
-.formacoes {
-    margin-right: -50%;
-    margin-top: -7.9%;
-    gap: 2rem;
-    width: 400px; /* largura do retângulo */
-    height: 110px; /* altura do retângulo */
-    background-color: white; /* cor de fundo */
-    border: 1px solid rgb(43, 41, 41); /* borda preta de 2px */
-    padding: 20px; /* espaço interno */
-    border-radius: 2rem;
-}
-
-.formacoes h2 {
-    font-size: 20px;
-    font-weight: 700;
-    padding: 5px;
-}
-
-.formacoes p {
-    padding: 5px;
-    color: rgb(85, 85, 85);
-}
-
-.fa-user-graduate {
-    color: #6C63FF;
-    font-size: 24px; /* Define o tamanho do ícone */
-    margin-right: 5px; /* Adiciona uma pequena margem à direita do ícone */
+    .about-buttons .btn {
+        margin-bottom: 10px;
+    }
 }
 
 .certificacoes h3 {
-    
     font-weight: 700;
     margin-top: 450px;
 }
 
 .certificacoes {
-    padding: 90px 15%;
-    text-align: center;
+    display: flex; /* Define flexbox para a seção */
+    flex-direction: column; /* Coloca o conteúdo em uma coluna (verticalmente) */
+    justify-content: center; /* Centraliza o conteúdo verticalmente */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+    height: 35vh; /* Garante que a seção ocupe 100% da altura da viewport */
+    text-align: center; /* Centraliza o texto dentro da seção */
 }
 
 .certificados-container {
@@ -481,3 +545,126 @@ body {
 .certificate .overlay a:hover {
     background-color: #005582;
 }
+
+section.habilidades {
+    padding: 30% 4px;
+    overflow-x: hidden;
+}
+
+.habilidades {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.habilidades .flex {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+}
+
+h2.titulo {
+    font-weight: bold;
+    color: #000000;
+    font-size: 38px;
+    text-align: center;
+    padding: 90px;
+}
+
+h2.titulo span {
+    color: #6C63FF;
+    font-size: 38px;
+    text-align: center;
+}
+
+.habilidades .habilidades-box {
+    color: #000000;
+    width: 150px;
+    height: 250px;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 20px;
+    transition: .2s;
+    flex-basis: 25%;
+    box-sizing: border-box;
+}
+
+.habilidades .habilidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #ffffff78;
+}
+
+.habilidades .habilidades-box i {
+    font-size: 70px;
+    color: #6C63FF
+}
+
+.habilidades .habilidades-box h3 {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+section.formulario {
+    display: flex;
+    justify-content: space-around;
+    margin-top: -350px;
+    margin-bottom: 30px; /* Adicione o valor que deseja para o espaçamento */
+}
+
+form{
+    max-width: 500px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form input, form textarea {
+    width: 100%;
+    background-color: #24242432;
+    border: 0;
+    outline: 0;
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 18px;
+}
+
+form textarea {
+    resize: none;
+    max-height: 200px;
+}
+
+form .btn-enviar {
+    margin-top: 20px;
+    text-align: center;
+}
+
+form .btn-enviar input{
+    width: 120px;
+    background-color: #6C63FF;
+    color: #fff;
+    font-weight: 700;
+    cursor: pointer;
+} 
+
+.footer {
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem;
+    background: #6C63FF;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.2rem;
+  }

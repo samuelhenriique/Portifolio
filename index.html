@@ -16,16 +16,19 @@
     integrity="sha384-Tv5i09RULyHKMwX0E8wJUqSOaXlyu3SQxORObAI08iUwIalMmN5L6AvlPX2LMoSE" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/fontawesome.css"
     integrity="sha384-jLKHWM3JRmfMU0A5x5AkjWkw/EYfGUAGagvnfryNV3F9VqM98XiIH7VBGVoxVSc7" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
+    <script src="https://kit.fontawesome.com/62a7b8e44c.js" crossorigin="anonymous"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 
 </head>
+
+    <!-- Cabeçalho -->
 <body>
-
-    <header>
-        <ul class="header">
-
+        <header class="header" id="header">
+        <ul>
             <li>
                 <a href="#home">SH <span>Dev.</span></a>
             </li>
@@ -40,14 +43,17 @@
                 <a href="#certificacoes">Certificados</a>
             </li>
             <li>
-                <a href="#portfolio">Habilidades</a>
+                <a href="#habilidades">Habilidades</a>
             </li>
             <li>
                 <a href="#falecomigo" style="border: 2px solid #6C63FF; padding: 8px 16px; border-radius: 25px; color: #6C63FF; transition: all 0.3s;" onmouseover="this.style.backgroundColor='#6C63FF'; this.style.color='#ffffff';" onmouseout="this.style.backgroundColor='transparent'; this.style.color='#6C63FF';">Fale Comigo</a>
             </li>                       
         </ul>
     </header>
+    <!-- Cabeçalho -->
+
         
+    <!-- Pagina Inicial -->
     <section class="home" id="home">
         <div class="home-div">
             <div class="home-text">
@@ -60,9 +66,8 @@
                     <span class="white-text">Front-end</span>
                     <span class="developer-text">Developer</span>
                 </h3>
-                </div>
+             </div>
                 <p>Acadêmico de Analise e Desenvolvimento de Sistemas</p>
-
                 <ul class="rede-sociais"> 
                     <li><a href="https://www.instagram.com/samuellninja/" target="_blank" class="link"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="https://twitter.com/sninjja" target="_blank" class="link"><i class="fa-brands fa-twitter"></i></a></li>
@@ -70,48 +75,46 @@
                     <li><a href="https://github.com/samuelhenriique" target="_blank" class="link"><i class="fa-brands fa-github"></i></a></li>
                     <li><a href="https://www.linkedin.com/in/samuelwenceslau/" target="_blank" class="link"><i class="fa-brands fa-linkedin-in"></i></a></li>
                 </ul>
-
                 <div class="button">
                     <a href="https://web.whatsapp.com/" target="_blank" class="btn">Download CV</a>
                     </a>
                 </div>
-
                 <a href="#about" class="scroll-down-link">
                     <i class="fas fa-chevron-down"></i>
                 </a>
+            </div>
+    </section>
+    <!-- Pagina Inicial -->
 
+
+    <!-- Sobre -->
+    <section class="about" id="about">
+        <h2>Conheça um pouco</h2>
+        <h3>SOBRE MIM</h3>
+        <div class="about-content">
+            <div class="about-text">
+                <h1>Olá, me chamo Samuel Henrique</h1>
+                <p>Sou um desenvolvedor web apaixonado pela tecnologia. Desde o momento em que mergulhei no mundo da programação, descobri minha paixão por transformar ideias em realidade digital, Neste momento essas são minhas Skills: HTML, CSS e JavaScript, PHP e Photoshop.</p>
+                <p>Sou movido pela curiosidade e pela vontade de aprender, e por isso estou constantemente buscando novos conhecimentos e aprimorando minhas habilidades. Estou Cursando Análise e Desenvolvimento de Sistemas na UNESC, sempre buscando ampliar meus conhecimentos teóricos e acadêmico.</p>
+                <div class="about-buttons">
+                    <a href="#" class="btn">Linkedin</a>
+                </div>
+                <div class="about-icons">
+                    <!-- Adicione os ícones de redes sociais aqui -->
+                </div>
+            </div>
+            <div class="about-img">
+                <img src="./src/assets/aboutme.jpg" alt="Sobre mim">
             </div>
         </div>
     </section>
+    <!-- Sobre -->
 
-    <section class="about" id="about">
-        <h2>Conheça Mais</h2>
-            <h3>Sobre Mim</h3>
-        <div class="about-img">
-            <img src="./src/assets/aboutme.jpg" alt="Sobre mim">
-        </div>
-        <ul class="experiencias">
-            <i class="fa-solid fa-medal"></i>
-            <h2>Experiências</h2>
-            <p>2+ years</p>
-            <p>Frontend Development </p>
-        </ul>
 
-        <ul class="formacoes">
-            <i class="fa-solid fa-user-graduate"></i>
-            <h2>Graduaçoes</h2>
-            <p>Técnico em informatica - CEDUP</p>
-            <p>Análise e Desenvolvimento de Sistemas - UNESC</p>
-        </ul>
-        
-    </section>
-    
+    <!-- Certificados -->
     <section class="certificacoes" id="certificacoes">
-
         <h3>Meus Certificados</h3>
-
         <div class="certificados-container">
-
             <div class="certificate">
                 <img src="./src/assets/C1.png" alt="Certificado 1">
                 <div class="overlay">
@@ -119,7 +122,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C2.png" alt="Certificado 2">
                 <div class="overlay">
@@ -127,7 +129,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C3.png" alt="Certificado 3">
                 <div class="overlay">
@@ -135,7 +136,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C4.png" alt="Certificado 4">
                 <div class="overlay">
@@ -143,7 +143,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C5.png" alt="Certificado 5">
                 <div class="overlay">
@@ -151,7 +150,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C6.png" alt="Certificado 6">
                 <div class="overlay">
@@ -159,7 +157,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C7.png" alt="Certificado 7">
                 <div class="overlay">
@@ -167,7 +164,6 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
             <div class="certificate">
                 <img src="./src/assets/C1.png" alt="Certificado 1">
                 <div class="overlay">
@@ -175,22 +171,72 @@
                     <a href="https://www.linkedin.com/in/samuelwenceslau/details/certifications/s" target="_blank">LinkedIn</a>
                 </div>
             </div>
-
         </div>
     </section>
-    
-    
-<button id="toggle-theme-btn" class="toggle-theme-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    <!-- Certificados -->
 
-    <script>
-        const toggleThemeBtn = document.getElementById('toggle-theme-btn');
-        const body = document.body;
+    <!-- Habilidades -->
+   <section class="habilidades" id="habilidades">
+        <div class="interface">
+            <h2 class="titulo">MINHAS <span>HABILIDADES.</span></h2>
+            <div class="flex">
+                <div class="habilidades-box">
+                    <i class="fa-brands fa-html5"></i>
+                <h3>HTML</h3>
+                <p>HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML.</p>
+            </div>
+                <div class="habilidades-box">
+                    <i class="fa-brands fa-css3"></i>
+                <h3>CSS</h3>
+                <p>Cascading Style Sheets é um mecanismo para adicionar estilos a uma página web, aplicado diretamente nas tags HTML ou ficar contido dentro das tags style.</p>
+            </div>
 
-        toggleThemeBtn.addEventListener('click', () => {
-            body.classList.toggle('dark-theme');
-            body.classList.toggle('light-theme');
-        });
-    </script>
+                <div class="habilidades-box">
+                    <i class="fa-brands fa-js"></i>
+                <h3>JavaScript</h3>
+                <p>JavaScript é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma.</p>
+            </div>
+            <div class="habilidades-box">
+                <i class="fa-brands fa-react"></i>
+            <h3>React</h3>
+            <p>O React é uma biblioteca front-end JavaScript de código aberto com foco em criar interfaces de usuário em páginas web.</p>
+        </div>
+        <div class="habilidades-box">
+            <i class="fa-brands fa-node-js"></i>
+        <h3>Node Js</h3>
+        <p>Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.</p>
+    </div>
+        <div class="habilidades-box">
+            <i class="fa-brands fa-bootstrap"></i>
+    <h3>Bootstrap</h3>
+         <p>Bootstrap é um framework web com código-fonte aberto para desenvolvimento de componentes de interface e front-end para sites e aplicações web, melhorando a experiência do usuário em um site amigável e responsivo.</p>
+    </div>
+            </div>
+        </div>
+   </section>
+   <!-- Habilidades -->
+
+   <!-- Formulario -->
+   <section class="formulario">
+        <div class="interface">
+            <h2 class="titulo">FALE <span>COMIGO.</span></h2>
+                <form action="">
+                    <input type="text" name="" id="" placeholder="Seu nome completo:" required>
+                    <input type="text" name="" id="" placeholder="Seu e-mail:" required>
+                    <input type="text" name="" id="" placeholder="Seu celular:">
+                    <textarea name="" id="" placeholder="Sua mensagem" required></textarea>
+                    <div class="btn-enviar"><input type="submit" value="ENVIAR"></div>
+                </form>
+            </div>
+       </section>
+       <!-- Formulario -->
     
+       <!-- Footer -->
+       <div class="footer">&copy;<span id="year"> </span><span> Todos os direitos reservados. Samuel Henrique 2024.</span></div>
+        <!-- Footer -->
+           
+    <button id="toggle-theme-btn" class="toggle-theme-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+    <script src="script.js"></script>
+
 </body>
 </html>
