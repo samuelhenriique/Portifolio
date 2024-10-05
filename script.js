@@ -25,21 +25,24 @@ toggleThemeBtn.addEventListener('click', () => {
     }
 });
 
-// Cabeçalho "Sumir"
-let lastScrollTop = 0;
-const header = document.getElementById('header');
+//Cabeçalho sumir 
 
-window.addEventListener('scroll', function() {
-    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrollTop > lastScrollTop) {
-        // Rolou para baixo - Esconder o cabeçalho
-        header.classList.add('hidden');
-    } else {
-        // Rolou para cima - Mostrar o cabeçalho
-        header.classList.remove('hidden');
-    }
-    lastScrollTop = scrollTop;
-});
+    let lastScrollTop = 0; // Armazena a posição da última rolagem
+    const header = document.querySelector('.header');
+
+    window.addEventListener('scroll', function() {
+        const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Posição atual da rolagem
+
+        if (scrollTop > lastScrollTop) {
+            // Rolando para baixo
+            header.classList.add('hidden'); // Adiciona a classe para esconder o cabeçalho
+        } else {
+            // Rolando para cima
+            header.classList.remove('hidden'); // Remove a classe para mostrar o cabeçalho
+        }
+        lastScrollTop = scrollTop; // Atualiza a posição da última rolagem
+    });
+
 
 //  Footer
 let year = document.querySelector("#year");
@@ -47,4 +50,3 @@ let year = document.querySelector("#year");
 $(document).ready(function () {
   year.innerText = new Date().getFullYear();
 });
-
