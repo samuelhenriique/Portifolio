@@ -112,7 +112,6 @@ body {
     color: #ffffff; /* Cor do texto do botão em modo escuro */
 }
 
-
 .toggle-theme-btn {
     position: fixed;
     bottom: 20px;
@@ -457,160 +456,154 @@ body {
 }
 /*FIM SOBRE MIM */
 
-/* Meus Projetos */
-section.projetos {
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #fff;
+/* PROJETOS */
+.projetos {
+  padding: 80px 4%;
 }
 
-section.projetos .flex {
-    gap: 80px;
-    margin-top: 5px;
+.projetos .titulo {
+  font-size: 2rem;
+  margin-bottom: 5px;
+  text-align: center;
 }
 
-.img-proj {
-    width: 360px;
-    height: 460px;
-    background-size: cover;
-    background-position: 100% 0%;
-    transition: 10s;
-    cursor: pointer;
-    border-radius: 40px;
-    position: relative  ;
+.projetos-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
 }
 
-.img-proj:hover {
-    background-position: 100% 100%;
+.projeto-card {
+  background-color: #1e1e1e;
+  border-radius: 20px;
+  width: 500px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
 }
 
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0000009d;
-    border-radius: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 24px;
-    font-weight: 600;
-    color: #fff;
-    opacity: 0;
-    transition: .8s;
+.projeto-card:hover {
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.1);
+  transform: translateY(-5px);
 }
 
-.overlay:hover {
-    opacity: 1;
+.projeto-card img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
 }
 
-.certificacoes {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 60px 5%;
-    text-align: center;
+.projeto-conteudo {
+  padding: 20px;
 }
 
-.certificacoes h3 {
-    margin-bottom: 50px;
-    font-size: 2rem;
-    color: #000000;
+.projeto-conteudo h3 {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 10px;
 }
 
-.certificados-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.projeto-conteudo p {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4rem;
 }
 
-.certificate {
-    position: relative;
-    width: 100%;
-    max-width: 280px;
-    height: auto;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.9s ease, box-shadow 0.3s ease;
+.projeto-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000a0;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
-.certificate:hover {
-    transform: scale(0.9);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+.projeto-card:hover .projeto-overlay {
+  opacity: 1;
 }
 
-.certificate img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+.projeto-overlay a {
+  color: #fff;
+  background-color: #007bff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
 }
 
-.certificate .overlay {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px;
-    box-sizing: border-box;
-    transition: top 0.3s ease;
+.projeto-overlay a:hover {
+  background-color: #0056b3;
 }
 
-.certificate:hover .overlay {
-    top: 0;
+/* Responsivo */
+@media (max-width: 1100px) {
+  .projeto-card {
+    width: 90%;
+  }
 }
 
-.certificate .overlay a {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #0077b5;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 20px;
-    transition: background-color 0.4s ease;
-}
 
-.certificate .overlay a:hover {
-    background-color: #005582;
-}
-
-/* Responsividade para telas menores */
-@media (max-width: 768px) {
-    .certificacoes h3 {
-        font-size: 1.5rem;
-    }
-
-    .certificate {
-        width: 90%;
-        max-width: 200px;
-    }
-
-    .certificados-container {
-        gap: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .certificate {
-        width: 100%;
-        max-width: 150px;
-    }
-
-    .certificados-container {
-        gap: 5px;
-    }
-}
 
 /* HABILIDADES */
+.habilidades {
+  margin-top: 60px; /* ou o valor que preferir, tipo 40px, 80px */
+}
+
+/* Título principal "Habilidades" */
+.titulo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #7B61FF; /* cor roxa para dar destaque */
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-shadow: 0 0 5px #7B61FFaa; /* leve brilho */
+}
+
+.titulo::after {
+  content: "";
+  display: block;
+  width: 80%;
+  height: 2px;
+  background-color: #b1b1b144; /* roxo transparente, discreto */
+  margin: 0.5rem auto 0 auto; /* centralizado e espaçado do texto */
+  border-radius: 2px;
+}
+
+/* Subtítulos "Back-end" e "Front-end" */
+.subtitulo {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #d1d1d1;
+  margin-bottom: 25px;
+  border-left: 5px solid #7B61FF; /* barra colorida na esquerda */
+  padding-left: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  user-select: none; /* impede seleção acidental */
+}
+
+/* Opcional: efeito hover no subtítulo */
+.subtitulo:hover {
+  color: #7B61FF;
+  border-color: #b48cff;
+  cursor: default;
+}
+
 .habilidades-container {
   display: flex;
   flex-wrap: wrap;
@@ -633,38 +626,76 @@ section.projetos .flex {
 .card {
   width: 200px;
   height: 140px;
-  background-color: #1a1a1a;
-  padding: 20px;
+  background-color: #1f1f1f; /* unifiquei para o tom mais escuro */
+  padding: 1rem 1.25rem;      /* padronizado */
   border-radius: 15px;
   text-align: center;
-  transition: 0.3s;
-  border: 1px solid transparent;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative; /* para sombras internas */
+  border: 1px solid transparent;
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.6s ease-in-out;
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  border-color: #ffffff22;
+  transform: translateY(-4px);
   box-shadow:
-    inset 0 0 25px rgba(255, 255, 255, 0.2), /* brilho interno */
-    0 0 10px rgba(255, 255, 255, 0.1);       /* leve glow externo */
+    inset 0 0 30px 8px rgba(255, 255, 255, 0.15), /* luz interna branca suave */
+    0 0 15px rgba(255, 255, 255, 0.1);             /* glow externo leve */
 }
 
+/* Ícones dentro do card */
+.card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+  transition: transform 0.3s ease;
+}
 
+.card img:hover {
+  transform: scale(1.1);
+}
+
+/* Ícones com <i> (se usar font icons) */
 .card i {
   font-size: 2.5em;
   color: #7B61FF;
   margin-bottom: 15px;
 }
 
+/* Texto dentro do card */
+.card span,
+.linguagem-nome {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  margin: 0.25rem 0;
+  text-align: center;
+}
+
+.linguagem-descricao,
 .card span {
-  font-size: 1em;
+  font-size: 0.9rem;
   color: #ccc;
   text-align: center;
 }
+
+.linguagem-nome {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #ffffff;
+  margin: 0.25rem 0;
+}
+
+.linguagem-descricao {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
 
 /* Responsivo */
 @media (max-width: 768px) {
@@ -683,6 +714,95 @@ section.projetos .flex {
   }
 }
 /* FIM DAS HABILIDADES */
+
+/* TECNOLOGIAS */
+.tecnologias {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.tecnologias .titulo {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  text-align: left;
+  margin-left: 12%;
+  border: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
+}
+
+.tecnologias .titulo::after {
+  content: none !important;
+  display: none !important;
+}
+
+.tecnologias-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tecnologias-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  max-width: 1100px;
+  width: 100%;
+}
+
+.tecnologias-cards .card {
+  background-color: #1e1e1e;
+  border-radius: 15px;
+  width: 165px;
+  height: 200px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+  box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+}
+
+.tecnologias-cards .card:hover {
+  box-shadow: inset 0 0 25px rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.tecnologias-cards .card img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  filter: brightness(1);
+  transition: filter 0.3s ease;
+}
+
+.tecnologias-cards .card:hover img {
+  filter: brightness(1.3);
+}
+
+.tecnologias-cards .linguagem-nome {
+  margin: 8px 0 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tecnologias-cards .linguagem-descricao {
+  font-size: 0.85rem;
+  color: #ccc;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .tecnologias-cards .card {
+    width: 45%;
+    max-width: 190px;
+  }
+}
+/* FIM TECNOLOGIAS */
+
 
 /* Seção do formulário */
 section.formulario {
