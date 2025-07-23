@@ -1,9 +1,11 @@
-window.sr = ScrollReveal({ reset: true});
-sr.reveal ('.home-text, .rede-sociais, .scroll-down-link,.button', {duration: 1600});
-sr.reveal ('.about', {duration: 2200})
-sr.reveal ('.certificacoes', { duration: 2000})
+// ScrollReveal Animations
+window.sr = ScrollReveal({ reset: true });
+sr.reveal('.home-text, .rede-sociais, .scroll-down-link, .button', { duration: 1600 });
+sr.reveal('.about', { duration: 2200 });
+sr.reveal('.certificacoes', { duration: 2000 });
+sr.reveal('.portfolio-footer', { duration: 1800 });
 
-
+// Toggle Theme
 const toggleThemeBtn = document.getElementById('toggle-theme-btn');
 const body = document.body;
 
@@ -12,7 +14,7 @@ const storedTheme = localStorage.getItem('theme');
 if (storedTheme) {
     body.classList.add(storedTheme);
 } else {
-    body.classList.add('light-theme'); // Tema padrão
+    body.classList.add('light-theme');
 }
 
 toggleThemeBtn.addEventListener('click', () => {
@@ -25,28 +27,62 @@ toggleThemeBtn.addEventListener('click', () => {
     }
 });
 
-//Cabeçalho sumir 
+// Header hide on scroll
+let lastScrollTop = 0;
+const header = document.querySelector('.header');
 
-    let lastScrollTop = 0; // Armazena a posição da última rolagem
-    const header = document.querySelector('.header');
+window.addEventListener('scroll', function() {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-    window.addEventListener('scroll', function() {
-        const scrollTop = window.pageYOffset || document.documentElement.scrollTop; // Posição atual da rolagem
+    if (scrollTop > lastScrollTop) {
+        header.classList.add('hidden');
+    } else {
+        header.classList.remove('hidden');
+    }
+    lastScrollTop = scrollTop;
+});
 
-        if (scrollTop > lastScrollTop) {
-            // Rolando para baixo
-            header.classList.add('hidden'); // Adiciona a classe para esconder o cabeçalho
-        } else {
-            // Rolando para cima
-            header.classList.remove('hidden'); // Remove a classe para mostrar o cabeçalho
-        }
-        lastScrollTop = scrollTop; // Atualiza a posição da última rolagem
+// Back to Top Button - SOLUÇÃO DEFINITIVA
+const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', function() {
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+    } else {
+        backToTopButton.classList.remove('show');
+    }
+});
+
+if (backToTopButton) {
+    backToTopButton.addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     });
+}
 
-
-//  Footer
-let year = document.querySelector("#year");
-
-$(document).ready(function () {
-  year.innerText = new Date().getFullYear();
+// Footer Year Update
+document.addEventListener('DOMContentLoaded', function() {
+    const currentYear = document.getElementById('current-year');
+    if (currentYear) {
+        currentYear.textContent = new Date().getFullYear();
+    }
+    
+    // Smooth scroll for footer links
+    document.querySelectorAll('.footer-links a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
 });
