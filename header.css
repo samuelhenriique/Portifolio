@@ -116,93 +116,162 @@ body {
     position: fixed;
     bottom: 20px;
     left: 20px;
-    background: transparent;
+    background: #6C63FF;
     border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
     cursor: pointer;
-    font-size: 24px;
-    color: #6C63FF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
     z-index: 999;
+    transition: all 0.3s ease;
 }
 
 .toggle-theme-btn:hover {
-    color: #ffffff;
+    transform: scale(1.1);
+    background: #5a52d6;
 }
 
-::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  ::-webkit-scrollbar-thumb {
-    background-color: #6C63FF; 
-    border-radius: 10px;
-  }
-  
-  ::-webkit-scrollbar-track {
-    background: #ffffff;
-  }
+.dark-theme .fa-sun { display: none; }
+.dark-theme .fa-moon { display: block !important; }
+.light-theme .fa-moon { display: none; }
+.light-theme .fa-sun { display: block !important; }
 
   /*CABEÇALHO */
   .header {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 30px;
+    padding: 20px 5%;
     background: transparent;
     position: fixed;
-    width: 100%;
+    width: 90%;
     top: 0;
     z-index: 1000;
-}
-.header.hidden {
-    top: -100px;
-    transition: top 0.3s;
-}
-.header ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-.header li {
-    margin: 0 20px;
-}
-.header a {
-    color: rgb(0, 0, 0);
-    text-decoration: none;
-    font-size: 18px;
-    transition: color 0.7s ease;
-}
-.header a:hover {
-    color: #6C63FF;
-}
-
-.fale-comigo {
-    border: 2px solid #6C63FF;
-    padding: 8px 16px;
-    border-radius: 25px;
-    color: #6C63FF;
-    transition: all 0.3s;
-}
-
-.fale-comigo:hover {
-    background-color: #ffffff;
-    color: #000000;
+    transition: all 0.3s ease;
 }
 
 .logo {
-    font-size: 18px;
+    font-size: 1.5rem;
     font-weight: bold;
-    margin-right: auto;
+    z-index: 1001;
 }
+
 .sh {
     color: rgb(0, 0, 0);
     transition: color 0.3s ease;
 }
+
+.dark-theme .sh {
+    color: #ffffff !important;
+}
+
 .dev {
     color: #6C63FF;
 }
+
 .sh:hover {
     color: #6C63FF;
+}
+
+.nav-menu .menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: #6C63FF;
+}
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    z-index: 1001;
+    color: #000;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 5%;
+        width: 90%;
+    }
+    
+    .menu-hamburguer {
+        display: block;
+    }
+    
+    .nav-menu .menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background-color: #6C63FF;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+        transition: right 0.5s ease;
+        z-index: 1000;
+    }
+    
+    .nav-menu .menu.active {
+        right: 0;
+    }
+    
+    .nav-menu .menu a {
+        color: white;
+        font-size: 1.2rem;
+    }
+    
+    .dark-theme .menu-hamburguer {
+        color: white;
+    }
+}
+
+/* Adicione isso no seu header.css */
+.close-menu-container {
+    display: none; /* Esconder em desktop */
+    text-align: right;
+    padding: 15px;
+    width: 100%;
+}
+
+.close-menu {
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+@media (max-width: 768px) {
+    .close-menu-container {
+        display: block; /* Mostrar apenas em mobile */
+    }
+    
+    .nav-menu .menu {
+        padding-top: 0; /* Ajuste para o botão de fechar */
+    }
 }
  /*FIM CABEÇALHO */
 

@@ -22,15 +22,20 @@
 
 <body>
 
-    <header class="header" id="header">
-        <ul>
-            <div class="logo"><span class="sh">SH</span> <span class="dev">Dev.</span></div>
+<header class="header" id="header">
+    <div class="logo"><span class="sh">SH</span> <span class="dev">Dev.</span></div>
+    <nav class="nav-menu">
+        <button class="menu-hamburguer">☰</button>
+        <ul class="menu">
+            <li class="close-menu-container">
+                <button class="close-menu">✕</button>
+            </li>
             <li><a href="#about">Sobre</a></li>
             <li><a href="#projetos">Projetos</a></li>
             <li><a href="#habilidades">Habilidades</a></li>
-               <!-- Botão Voltar ao Topo  <li><a href="https://www.linkedin.com/in/samuelwenceslau/" target="_blank" class="fale-comigo">Fale Comigo</a></li> -->            
-        </ul>   
-    </header>
+        </ul>
+    </nav>
+</header>
 
     <section class="home" id="home">
         <div class="home-div">
@@ -333,7 +338,10 @@
 </div>
 </footer>
 
-    <button id="toggle-theme-btn" class="toggle-theme-btn"><i class="fa-solid fa-circle-half-stroke"></i></button>
+<button id="toggle-theme-btn" class="toggle-theme-btn">
+    <i class="fa-solid fa-sun"></i>
+    <i class="fa-solid fa-moon" style="display:none;"></i>
+</button>
     <script src="script.js"></script>
 </body>
 </html>
