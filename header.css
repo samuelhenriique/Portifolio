@@ -54,28 +54,29 @@ body {
 }
 
 .dark-theme .about {
-    background-color: #000000; /* Fundo da secção em modo escuro */
-    color: #ffffff; /* Cor do texto em modo escuro */
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .dark-theme .about h2,
 .dark-theme .about h3,
 .dark-theme .about h1,
 .dark-theme .about p {
-    color: #ffffff; /* Garante que todos os textos fiquem brancos no modo escuro */
+  
+    color: #ffffff;
 }
 
 .dark-theme .about-buttons .btn {
-    background-color: #6C63FF; /* Cor de fundo do botão em modo escuro */
-    color: #ffffff; /* Cor do texto do botão em modo escuro */
+    background-color: #6C63FF;
+    color: #ffffff;
 }
 
 .dark-theme .about-buttons .btn:hover {
-    background-color: #4a42cc; /* Cor de fundo do botão ao passar o mouse em modo escuro */
+    background-color: #4a42cc;
 }
 
 .dark-theme .about-img img {
-    border-color: #ffffff; /* Borda da imagem em modo escuro, se necessário */
+    border-color: #ffffff;
 }
 
 .dark-theme .habilidades .habilidades-box {
@@ -84,32 +85,31 @@ body {
 }
 
 .dark-theme .habilidades .habilidades-box:hover {
-    box-shadow: 0 0 20px #6C63FF; /* Ajuste o sombreado para um tom que combine com o tema escuro */
+    box-shadow: 0 0 20px #6C63FF;
 }
 
 .dark-theme .habilidades .habilidades-box i {
-    color: #9E87FF; /* Pode mudar a cor do ícone para uma cor mais adequada ao tema escuro */
+    color: #9E87FF;
 }
 
-/* Caso "MINHAS" esteja em um título específico */
 .dark-theme h2.titulo {
-    color: #ffffff; /* Altere a cor para o tema escuro */
+    color: #ffffff;
 }
 
 .dark-theme section.formulario {
-    background-color: #000000; /* Fundo escuro para o formulário */
-    color: #ffffff; /* Cor do texto em modo escuro */
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .dark-theme form input,
 .dark-theme form textarea {
-    background-color: #444444; /* Fundo dos campos de entrada em modo escuro */
-    color: #ffffff; /* Cor do texto nos campos de entrada */
+    background-color: #444444;
+    color: #ffffff;
 }
 
 .dark-theme form .btn-enviar input {
-    background-color: #6C63FF; /* Cor do botão em modo escuro */
-    color: #ffffff; /* Cor do texto do botão em modo escuro */
+    background-color: #6C63FF; 
+    color: #ffffff;
 }
 
 .toggle-theme-btn {
@@ -140,6 +140,7 @@ body {
   ::-webkit-scrollbar-track {
     background: #ffffff;
   }
+
   /*CABEÇALHO */
   .header {
     display: flex;
@@ -572,24 +573,22 @@ body {
   }
 }
 
-
-
 /* HABILIDADES */
 .habilidades {
-  margin-top: 60px; /* ou o valor que preferir, tipo 40px, 80px */
+  margin-top: 60px;
 }
 
 /* Título principal "Habilidades" */
 .titulo {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #7B61FF; /* cor roxa para dar destaque */
+  color: #7B61FF;
   text-align: center;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  text-shadow: 0 0 5px #7B61FFaa; /* leve brilho */
+  text-shadow: 0 0 5px #7B61FFaa;
 }
 
 .titulo::after {
@@ -597,8 +596,8 @@ body {
   display: block;
   width: 80%;
   height: 2px;
-  background-color: #b1b1b144; /* roxo transparente, discreto */
-  margin: 0.5rem auto 0 auto; /* centralizado e espaçado do texto */
+  background-color: #b1b1b144;
+  margin: 0.5rem auto 0 auto;
   border-radius: 2px;
 }
 
@@ -608,15 +607,14 @@ body {
   font-weight: 600;
   color: #d1d1d1;
   margin-bottom: 25px;
-  border-left: 5px solid #7B61FF; /* barra colorida na esquerda */
+  border-left: 5px solid #7B61FF;
   padding-left: 15px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  user-select: none; /* impede seleção acidental */
+  user-select: none;
 }
 
-/* Opcional: efeito hover no subtítulo */
 .subtitulo:hover {
   color: #7B61FF;
   border-color: #b48cff;
@@ -645,15 +643,15 @@ body {
 .card {
   width: 200px;
   height: 140px;
-  background-color: #1f1f1f; /* unifiquei para o tom mais escuro */
-  padding: 1rem 1.25rem;      /* padronizado */
+  background-color: #1f1f1f;
+  padding: 1rem 1.25rem;
   border-radius: 15px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative; /* para sombras internas */
+  position: relative;
   border: 1px solid transparent;
   transition: 
     transform 0.3s ease, 
@@ -663,8 +661,8 @@ body {
 .card:hover {
   transform: translateY(-4px);
   box-shadow:
-    inset 0 0 30px 8px rgba(255, 255, 255, 0.15), /* luz interna branca suave */
-    0 0 15px rgba(255, 255, 255, 0.1);             /* glow externo leve */
+    inset 0 0 30px 8px rgba(255, 255, 255, 0.15),
+    0 0 15px rgba(255, 255, 255, 0.1);
 }
 
 /* Ícones dentro do card */
@@ -679,7 +677,6 @@ body {
   transform: scale(1.1);
 }
 
-/* Ícones com <i> (se usar font icons) */
 .card i {
   font-size: 2.5em;
   color: #7B61FF;
@@ -715,8 +712,6 @@ body {
   color: #ccc;
 }
 
-
-/* Responsivo */
 @media (max-width: 768px) {
   .habilidades-container {
     flex-direction: column;
@@ -813,7 +808,6 @@ body {
   color: #ccc;
 }
 
-/* Responsivo */
 @media (max-width: 768px) {
   .tecnologias-cards .card {
     width: 45%;
@@ -889,7 +883,6 @@ form .btn-enviar input {
     gap: 30px;
 }
 
-/* Estilos comuns para todas as colunas */
 .footer-brand,
 .footer-links,
 .footer-contact,
@@ -897,7 +890,6 @@ form .btn-enviar input {
     flex: 0 0 200px;
 }
 
-/* Títulos das seções - ESTILO UNIFICADO */
 .footer-brand h3,
 .footer-links h4,
 .footer-contact h4,
@@ -911,7 +903,6 @@ form .btn-enviar input {
     font-weight: 500;
 }
 
-/* Linha decorativa abaixo dos títulos - ESTILO UNIFICADO */
 .footer-links h4::after,
 .footer-contact h4::after,
 .footer-social h4::after {
@@ -925,14 +916,12 @@ form .btn-enviar input {
     transition: width 0.3s ease;
 }
 
-/* Efeito hover para os títulos */
 .footer-links h4:hover::after,
 .footer-contact h4:hover::after,
 .footer-social h4:hover::after {
     width: 50px;
 }
 
-/* Estilo específico para a marca */
 .footer-brand h3 {
     font-size: 24px;
     margin-bottom: 15px;
@@ -953,7 +942,6 @@ form .btn-enviar input {
     opacity: 0.8;
 }
 
-/* Listas de links e contato */
 .footer-links ul,
 .footer-contact ul {
     list-style: none;
@@ -998,7 +986,6 @@ form .btn-enviar input {
     text-align: center;
 }
 
-/* Seção de redes sociais */
 .social-icons {
     display: flex;
     gap: 15px;
@@ -1027,7 +1014,6 @@ form .btn-enviar input {
     transform: translateY(-3px);
 }
 
-/* Rodapé inferior */
 .footer-bottom {
     text-align: center;
     margin-top: 40px;
@@ -1098,7 +1084,6 @@ form .btn-enviar input {
     background-color: #7d75ff;
 }
 
-/* RESPONSIVE */
 @media (max-width: 768px) {
     .footer-container {
         flex-direction: column;

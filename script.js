@@ -1,15 +1,12 @@
-// ScrollReveal Animations
 window.sr = ScrollReveal({ reset: true });
 sr.reveal('.home-text, .rede-sociais, .scroll-down-link, .button', { duration: 1600 });
 sr.reveal('.about', { duration: 2200 });
 sr.reveal('.certificacoes', { duration: 2000 });
 sr.reveal('.portfolio-footer', { duration: 1800 });
 
-// Toggle Theme
+// Toggle Funcional
 const toggleThemeBtn = document.getElementById('toggle-theme-btn');
 const body = document.body;
-
-// Carregar o tema armazenado
 const storedTheme = localStorage.getItem('theme');
 if (storedTheme) {
     body.classList.add(storedTheme);
@@ -27,7 +24,6 @@ toggleThemeBtn.addEventListener('click', () => {
     }
 });
 
-// Header hide on scroll
 let lastScrollTop = 0;
 const header = document.querySelector('.header');
 
@@ -42,7 +38,7 @@ window.addEventListener('scroll', function() {
     lastScrollTop = scrollTop;
 });
 
-// Back to Top Button - SOLUÇÃO DEFINITIVA
+// BOTAO Voltar ao Topo
 const backToTopButton = document.querySelector('.back-to-top');
 
 window.addEventListener('scroll', function() {
@@ -63,14 +59,13 @@ if (backToTopButton) {
     });
 }
 
-// Footer Year Update
+// Footer Ano Atual
 document.addEventListener('DOMContentLoaded', function() {
     const currentYear = document.getElementById('current-year');
     if (currentYear) {
         currentYear.textContent = new Date().getFullYear();
     }
     
-    // Smooth scroll for footer links
     document.querySelectorAll('.footer-links a').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             e.preventDefault();
